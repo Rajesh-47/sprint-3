@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Track Your Order</h1>
+    </header>
+    <main>
+        <p>Enter your Order ID to track your order:</p>
+        <form action="/track_order" method="post">
+            <input type="text" name="order_id" placeholder="Order ID" required>
+            <button type="submit">Track</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Product Customization Shop</p>
+    </footer>
+</body>
+</html>

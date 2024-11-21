@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Your Cart</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/tshirts">T-Shirts</a></li>
+                <li><a href="/bags">Bags</a></li>
+                <li><a href="/cups">Cups</a></li>
+                <li><a href="/cart">Cart</a></li> <!-- Added Cart link -->
+                <li><a href="/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Items in Your Cart</h2>
+        <ul>
+            {% for item in cart_items %}
+            <li>{{ item.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.price }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2024 Product Customization Shop</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/tshirts">T-Shirts</a></li>
+                <li><a href="/bags">Bags</a></li>
+                <li><a href="/cups">Cups</a></li>
+                <li><a href="/cart">Cart</a></li> <!-- Added Cart link -->
+                <li><a href="/checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Enter Delivery Address</h2>
+        <form action="/submit_order" method="POST">
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address"><br><br>
+            <input type="submit" value="Place Order">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Product Customization Shop</p>
+    </footer>
+</body>
+</html>
